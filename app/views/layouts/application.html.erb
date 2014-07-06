@@ -5,10 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-<%= yield %>
-
+	<%= render 'navigation' %>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<h1>Store</h1>
+				Welcome to the store!
+			</div>
+			<div class="col-sm-9"><%= yield %></div>
+		</div>
+	</div>
 </body>
 </html>
